@@ -13,6 +13,16 @@ export class AuthService {
   static clientId = '00000000-0000-0000-0000-000000000000';
 
   static initialize() {
+    var DeploymentConfig = {
+      authEnabled: false,
+      authType: 'aad',
+      aad : {
+        tenant: '00000000-0000-0000-0000-000000000000',
+        appId: '00000000-0000-0000-0000-000000000000',
+        instance: ''
+      }
+    }
+    global.DeploymentConfig = DeploymentConfig;
     if (typeof global.DeploymentConfig === 'undefined') {
       alert('The dashboard configuration is missing.\n\nVerify the content of webui-config.js.');
       throw new Error('The global configuration is missing. Verify the content of webui-config.js.');

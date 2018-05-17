@@ -23,6 +23,7 @@ export class AuthService {
       }
     }
     global.DeploymentConfig = DeploymentConfig;
+    alert(global.DeploymentConfig);
     if (typeof global.DeploymentConfig === 'undefined') {
       alert('The dashboard configuration is missing.\n\nVerify the content of webui-config.js.');
       throw new Error('The global configuration is missing. Verify the content of webui-config.js.');

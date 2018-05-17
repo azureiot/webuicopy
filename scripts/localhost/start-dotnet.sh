@@ -23,5 +23,5 @@ fi
 echo "Starting PCS microservices..."
 docker-compose -f scripts/localhost/docker-compose.dotnet.yml up -d --timeout 0
 
-echo "Starting reverse proxy at http://127.0.0.1:9000 ..."
+echo "Starting reverse proxy at http://127.0.0.1:80 ..."
 nginx -c $APP_HOME/scripts/localhost/nginx.conf
